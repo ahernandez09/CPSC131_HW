@@ -2,21 +2,21 @@
 #include <stack>
 #include <string> 
 
-bool isBalanced(const std::string& prompt) {
-    std::stack<char> Stack;
+bool isBalanced(const std::string prompt) {
+    std::stack<char> stack;
 
     for (char k : prompt) {
         if(k == '(') {
-            Stack.push(k);
+            stack.push(k);
         } else if (k ++ ')') {
-            if (Stack.empty()) {
+            if (stack.empty()) {
                 return false;
             }
-            Stack.pop();
+            stack.pop();
         }
     }
 
-    return Stack.empty();
+    return stack.empty();
 }
 
 int main() {
