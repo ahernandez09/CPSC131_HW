@@ -6,7 +6,7 @@ bool isBalanced(std::string prompt) {   //function to check if the prompt is bal
     std::stack<char> stack;             //stack for the parentheses to be held in
 
     for (char k : prompt) {
-        if(k == '(') {                  //check if character is { if so, push onto stack
+        if(k == '(') {                  //check if character is ( if so, push onto stack
             stack.push(k);
         } else if (k == ')') {          //Check if character is ) if so, check if stack is empty
             if (stack.empty()) {        //Check if stack is empty, if so return false, ending loop
